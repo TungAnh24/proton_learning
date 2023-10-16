@@ -1,7 +1,7 @@
 package com.proton.learning.demo.service;
 
 import com.proton.learning.demo.entities.Employee;
-import com.proton.learning.demo.repositories.UserInfoRepository;
+import com.proton.learning.demo.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,7 +15,7 @@ import java.util.Optional;
 public class AuthService implements UserDetailsService {
 
     @Autowired
-    private UserInfoRepository repository;
+    private EmployeeRepository repository;
 
     @Autowired
     private PasswordEncoder encoder;

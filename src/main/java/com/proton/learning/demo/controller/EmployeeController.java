@@ -1,13 +1,10 @@
 package com.proton.learning.demo.controller;
 
-import com.proton.learning.demo.customException.DuplicatedEntityException;
 import com.proton.learning.demo.customException.IdNotFoundException;
 import com.proton.learning.demo.dto.EmployeeDto;
 import com.proton.learning.demo.service.EmployeeServiceImpl;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

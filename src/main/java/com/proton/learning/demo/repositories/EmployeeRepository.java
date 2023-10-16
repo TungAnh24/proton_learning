@@ -5,9 +5,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+    Optional<Employee> findByUsername(String username);
     // Kiểm tra xem thông tin ( username, phone, email ) đã có trên hệ thống chưa
     @Query("select (count(epl) > 0) " +
             "from Employee epl where upper(epl.username) = upper(?1) " +
